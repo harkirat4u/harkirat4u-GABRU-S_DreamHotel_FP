@@ -80,7 +80,7 @@
       
       header {
           text-align: center;
-          background-image: url();
+          background-color: #000000;
       }
       /* styles to have fluid images */
       
@@ -143,7 +143,7 @@
       /* styles for the nav bar containing the links */
       
       nav {
-          font-size: 1.25em;
+          /* font-size: 1.25em; */
           font-weight: bold;
           text-align: center;
           margin-top: -1em;
@@ -524,6 +524,7 @@
           footer {
               margin-top: -0.2em;
               padding: 2em;
+              background-color: black;
               /* overflow: auto; */
           }
           /* styles for h1 - giving white color */
@@ -545,10 +546,11 @@
           /* styles for header */
           header {
               text-align: left;
-              background-color: transparent;
+              background-color:transparent;
+              
           }
           h3 {
-              color: #c1d9ca;
+              color: #f77a14;
           }
           /* styles for anchor tags inside main element */
           main a {
@@ -556,7 +558,7 @@
           }
           /* styles for the main */
           main {
-              background-color: #02020293;
+              background-color: #251e1e93;
           }
           /* styles for paragraphs inside main */
           main p {
@@ -580,8 +582,8 @@
           /* styles for ul in nav for links */
           nav ul {
               margin: 0;
-              padding-left: 0.5%;
-              padding-right: 0.5%;
+              /* padding-left: 0.5%;
+              padding-right: 0.5%; */
           }
           /* styles for the list items in nav */
           nav li {
@@ -594,7 +596,7 @@
           nav li a {
               display: inline-block;
               padding: 0.7em;
-              text-shadow: 0.2em 0.1em #3d3d35;
+             /* // text-shadow: 0.2em 0.1em #3d3d35; */
           }
           /* styles for pseudo-classes */
           /* when the link is not visited */
@@ -608,7 +610,7 @@
           /* pseudo class when hoverin over link */
           nav li a:hover {
               font-style: italic;
-              color: #9d9d93;
+              color: #68f530;
           }
           /* when the links are active */
           nav li a:active {
@@ -657,7 +659,7 @@
       /* Slideshow container */
       
       .slideshow-container {
-          max-width: 90%;
+          max-width: 100%;
           position: relative;
           margin: auto;
       }
