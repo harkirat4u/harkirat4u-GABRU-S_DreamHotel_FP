@@ -37,7 +37,7 @@ function getRadioVal(form, name) {
 
 
 let db;
-const request = window.indexedDB.open('Registration', 4);
+const request = window.indexedDB.open('Registration', 5);
 console.log('Database enter');
 window.onload = function() {
     // let request = window.indexedDB.open('Registration', 1);
@@ -67,7 +67,7 @@ window.onload = function() {
         let userinput = user1.value;
         let passt = pass1.value;
         // alert(userinput+""+passt);
-        const request = window.indexedDB.open("Registration", 4);
+        const request = window.indexedDB.open("Registration", 5);
 
         request.onsuccess = () => {
             const db = request.result;
@@ -190,7 +190,7 @@ window.onload = function() {
         var radioother = getRadioVal(document.getElementById('selected'), 'other');
 
         e.preventDefault();
-        const request = window.indexedDB.open("Registration", 4);
+        const request = window.indexedDB.open("Registration", 5);
         request.onsuccess = () => {
 
             const username = user.value;

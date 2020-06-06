@@ -12,7 +12,7 @@ const form = document.querySelector('#regform');
 const submitBtn = document.querySelector('form button');
 let db;
 window.onload = function() {
-    let request = window.indexedDB.open('Registration', 4);
+    let request = window.indexedDB.open('Registration', 5);
 
 
     request.onerror = function() {
@@ -107,7 +107,7 @@ window.onload = function() {
         }
 
 
-        const request = window.indexedDB.open("Registration", 4);
+        const request = window.indexedDB.open("Registration", 5);
         request.onsuccess = () => {
 
             let username1 = user.value;

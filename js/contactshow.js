@@ -5,7 +5,7 @@ const list = document.querySelector('ul');
 
 let db;
 window.onload = function() {
-    let request = window.indexedDB.open('Contact_db', 2);
+    let request = window.indexedDB.open('Contact_db', 5);
 
 
     request.onerror = function() {

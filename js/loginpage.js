@@ -43,7 +43,7 @@ window.onload = function() {
     function loginfunction(e) {
         e.preventDefault();
         let userinput = user.value;
-        const request = window.indexedDB.open("Registration", 4);
+        const request = window.indexedDB.open("Registration", 5);
 
         request.onsuccess = () => {
             const db = request.result;
