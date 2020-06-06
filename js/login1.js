@@ -99,27 +99,28 @@ window.onload = function() {
             cursorRequest.onsuccess = e => {
                 const cursor = e.target.result;
                 if (cursor) {
-                    if (cursor.value.user === userinput) {
+                    if (cursor.value.user == userinput) 
+                    {
                         alert("Welcome-:" + cursor.value.user)
                         showLogin();
                         console.log('logined');
-                        console.log('logined' + cursor.value.user);
-
-
+                        console.log('logined' + cursor.value.user);  
+                        displayData2();
                     }
                     cursor.continue();
-
+                 
                 } else {
                     console.log('login-else');
-
+                   
                 }
+              
 
             }
             transaction.oncomplete = function() {
                 console.log('Transaction completed: database modification finished.');
-                displayData2();
+               
                 // update the display of data to show the newly added item, by running displayData() again.
-
+                
             };
 
             transaction.onerror = function() {
@@ -200,6 +201,7 @@ window.onload = function() {
 
 
     function displayData2(e) {
+        e.preventDefault();
         var radioroom = getRadioVal(document.getElementById('selected'), 'room');
         var radioperson = getRadioVal(document.getElementById('selected'), 'person');
         var radioother = getRadioVal(document.getElementById('selected'), 'other');
@@ -221,7 +223,7 @@ window.onload = function() {
 
                 const cursor = e.target.result;
                 if (cursor) {
-                    alert("data added");
+                  
                     const invoice = cursor.value;
                     invoice.bname = bname1.value;
                     invoice.ndays = ndays1.value;
