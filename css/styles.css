@@ -24,9 +24,6 @@
                    margin-top: 2em;
                    width: 80%;
                }
-               /* styles for the checkboxes .chkbx {
-          display: inline-block;
-      } */
                /* styles for the desktop class */
                
                .desktop {
@@ -67,6 +64,8 @@
                h3,
                h1 {
                    color: #c1d9ca;
+                   font-family: "Times New Roman", Times, serif;
+                   font-style: italic;
                }
                /* styles for the logo in the header div */
                
@@ -186,6 +185,7 @@
                
                p {
                    color: white;
+                   font-family: "Sofia";
                }
                
                .register {
@@ -250,6 +250,7 @@
                    }
                    /* styles for the paragraphs inside the main article element */
                    article p {
+                       font-family: "Sofia";
                        color: #000000;
                        margin-top: 2%;
                        padding: 1%;
@@ -481,6 +482,7 @@
                    /* styles for the paragraphs in article */
                    article p {
                        color: #000000;
+                       font-family: "Sofia";
                    }
                    /* styles for body giving gradients */
                    body {
@@ -494,14 +496,6 @@
                    .contact {
                        color: #ffffff;
                    }
-                   /* styles for the form element */
-                   /* form {
-              padding: 1em;
-          } */
-                   /* styles for the  paragraph in the form*/
-                   /* form p {
-              color: #000000;
-          } */
                    /* styles for images in figure element */
                    figure img {
                        height: 15em;
@@ -552,6 +546,7 @@
                    /* styles for paragraphs inside main */
                    main p {
                        color: #ffffff;
+                       font-family: "Sofia";
                        margin-left: auto;
                        margin-right: auto;
                        width: 90%;
