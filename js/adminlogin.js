@@ -8,7 +8,7 @@ formadmin.onsubmit = adminLogin;
 function adminLogin() {
     if (useradmin.value === "admin" && passadmin.value === "admin") {
         alert("welcome admin");
-        window.open('/Users/harkiratsingh/Desktop/project 2 2/contactshow.html');
+        window.open('./contactshow.html');
     } else {
         alert("Invalid User")
     }
