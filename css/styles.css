@@ -541,6 +541,7 @@
                    header {
                        text-align: left;
                        background-color: transparent;
+                       margin-bottom: 1em;
                    }
                    h3 {
                        color: #c1d9ca;
