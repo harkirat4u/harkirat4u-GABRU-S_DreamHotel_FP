@@ -55,6 +55,7 @@
                    margin-top: 2em;
                    color: #ffffff;
                    overflow: auto;
+                   box-shadow: 0px 5px 10px 0px;
                }
                
                footer a {
@@ -73,6 +74,7 @@
                header {
                    text-align: center;
                    background-image: url();
+                   margin-bottom: 2em;
                }
                /* styles to have fluid images */
                
@@ -89,6 +91,7 @@
                    background-color: rgba(19, 52, 58, 0.575);
                    margin: auto;
                    border-radius: 5em 5em 5em 5em;
+                   box-shadow: 5px 10px;
                }
                
                .intro h1 {
@@ -118,10 +121,11 @@
                    font-size: 1em;
                    margin-top: 0.5em;
                    padding: 1em;
-                   border-radius: 2em 0 2em 0;
+                   border-radius: 5em 5em 5em 5em;
                    opacity: 0.85;
                    color: #ffffff;
                    background-color: #02020293;
+                   box-shadow: 5px 10px;
                }
                /* styles for anchor tags inside main element */
                
@@ -513,7 +517,7 @@
                    }
                    /* styles for footer */
                    footer {
-                       margin-top: -0.2em;
+                       margin-top: 2em;
                        padding: 2em;
                        /* overflow: auto; */
                    }
