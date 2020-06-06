@@ -121,10 +121,7 @@ window.onload = function() {
 
             const cursor = e.target.result;
             if (cursor) {
-                // alert(cursor.value.user);
-                // const invoice = cursor.value;
-                // invoice.vendor = 'P&GE';
-                // const updateRequest = cursor.update(invoice);
+
                 const listItem = document.createElement('li');
                 const h3 = document.createElement('h3');
                 const para = document.createElement('p');
