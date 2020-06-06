@@ -29,28 +29,28 @@ window.onload = function() {
     }
 
 
-    request.onupgradeneeded = function(e) {
-        // Grab a reference to the opened database
-        let db = e.target.result;
+//     request.onupgradeneeded = function(e) {
+//         // Grab a reference to the opened database
+//         let db = e.target.result;
 
-        // Create an objectStore to store our notes in (basically like a single table)
-        // including a auto-incrementing key
-        let objectStore = db.createObjectStore('Login', { keyPath: 'userid', autoIncrement: true });
+//         // Create an objectStore to store our notes in (basically like a single table)
+//         // including a auto-incrementing key
+//         let objectStore = db.createObjectStore('Login', { keyPath: 'userid', autoIncrement: true });
 
-        // Define what data items the objectStore will contain
-        objectStore.createIndex('user', 'user', { unique: false });
-        objectStore.createIndex('pass', 'pass', { unique: false });
-        objectStore.createIndex('email', 'email', { unique: false });
-        objectStore.createIndex('phone', 'phone', { unique: false });
-        objectStore.createIndex('bname', 'bname', { unique: false });
-        objectStore.createIndex('ndays', 'ndays', { unique: false });
-        objectStore.createIndex('room', 'room', { unique: false });
-        objectStore.createIndex('person', 'person', { unique: false });
-        objectStore.createIndex('other', 'other', { unique: false });
+//         // Define what data items the objectStore will contain
+//         objectStore.createIndex('user', 'user', { unique: false });
+//         objectStore.createIndex('pass', 'pass', { unique: false });
+//         objectStore.createIndex('email', 'email', { unique: false });
+//         objectStore.createIndex('phone', 'phone', { unique: false });
+//         objectStore.createIndex('bname', 'bname', { unique: false });
+//         objectStore.createIndex('ndays', 'ndays', { unique: false });
+//         objectStore.createIndex('room', 'room', { unique: false });
+//         objectStore.createIndex('person', 'person', { unique: false });
+//         objectStore.createIndex('other', 'other', { unique: false });
 
 
-        console.log('Database setup complete');
-    };
+//         console.log('Database setup complete');
+//     };
 
 
     form.onsubmit = addData;
