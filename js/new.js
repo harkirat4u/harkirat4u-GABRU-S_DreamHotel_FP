@@ -85,7 +85,7 @@ window.onload = function() {
             console.log('Transaction completed: database modification finished.');
             alert("Registered Succesfully");
             // update the display of data to show the newly added item, by running displayData() again.
-            displayData();
+            // displayData();
             alert('registered');
         };
 
@@ -96,74 +96,74 @@ window.onload = function() {
     }
 
 
-    function displayData() {
+    // function displayData() {
 
 
-        // const request = window.indexedDB.open("Registration", 1);
-        // // Here we empty the contents of the list element each time the display is updated
-        // // If you didn't do this, you'd get duplicates listed each time a new note is added
-        while (list.firstChild) {
-            list.removeChild(list.firstChild);
-        }
+    //     // const request = window.indexedDB.open("Registration", 1);
+    //     // // Here we empty the contents of the list element each time the display is updated
+    //     // // If you didn't do this, you'd get duplicates listed each time a new note is added
+    //     while (list.firstChild) {
+    //         list.removeChild(list.firstChild);
+    //     }
 
 
-        const request = window.indexedDB.open("Registration", 5);
-        request.onsuccess = () => {
+    //     const request = window.indexedDB.open("Registration", 5);
+    //     request.onsuccess = () => {
 
-            let username1 = user.value;
-            alert(username);
-            const db = request.result;
-            const transaction = db.transaction(['Login'], 'readwrite');
-            const invStore = transaction.objectStore('Login');
-            const vendorIndex = invStore.index('user');
-            const keyRng = IDBKeyRange.only(username1);
-            const cursorRequest = vendorIndex.openCursor(keyRng);
-            cursorRequest.onsuccess = e => {
-
-
-                const cursor = e.target.result;
-                if (cursor) {
-                    // alert(cursor.value.user);
-                    // const invoice = cursor.value;
-                    // invoice.vendor = 'P&GE';
-                    // const updateRequest = cursor.update(invoice);
-                    const listItem = document.createElement('li');
-                    const h3 = document.createElement('h3');
-                    const para = document.createElement('p');
-                    const para1 = document.createElement('p');
-                    const para2 = document.createElement('p');
-                    const para3 = document.createElement('p');
-                    const para4 = document.createElement('p');
+    //         let username1 = user.value;
+    //         alert(username);
+    //         const db = request.result;
+    //         const transaction = db.transaction(['Login'], 'readwrite');
+    //         const invStore = transaction.objectStore('Login');
+    //         const vendorIndex = invStore.index('user');
+    //         const keyRng = IDBKeyRange.only(username1);
+    //         const cursorRequest = vendorIndex.openCursor(keyRng);
+    //         cursorRequest.onsuccess = e => {
 
 
-                    listItem.appendChild(h3);
-                    // listItem.appendChild(para);
-                    // listItem.appendChild(para1);
-                    // listItem.appendChild(para2);
-                    listItem.appendChild(para3);
-                    listItem.appendChild(para4);
-                    list1.appendChild(listItem);
+    //             const cursor = e.target.result;
+    //             if (cursor) {
+    //                 // alert(cursor.value.user);
+    //                 // const invoice = cursor.value;
+    //                 // invoice.vendor = 'P&GE';
+    //                 // const updateRequest = cursor.update(invoice);
+    //                 const listItem = document.createElement('li');
+    //                 const h3 = document.createElement('h3');
+    //                 const para = document.createElement('p');
+    //                 const para1 = document.createElement('p');
+    //                 const para2 = document.createElement('p');
+    //                 const para3 = document.createElement('p');
+    //                 const para4 = document.createElement('p');
 
-                    // Put the data from the cursor inside the h3 and para
-                    h3.textContent = "Welcome-:" + cursor.value.user;
-                    para3.textContent = "Lastname-" + cursor.value.lastname;
-                    para2.textContent = "Phone-" + cursor.value.email;
-                    para4.textContent = "Phone-" + cursor.value.phone;
 
-                    cursor.continue();
-                } else {
-                    // Again, if list item is empty, display a 'No notes stored' message
-                    if (!list.firstChild) {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = 'No notes stored.';
-                        list.appendChild(listItem);
-                    }
-                    // if there are no more cursor items to iterate through, say so
-                    console.log('Notes all displayed');
-                }
-            }
+    //                 listItem.appendChild(h3);
+    //                 // listItem.appendChild(para);
+    //                 // listItem.appendChild(para1);
+    //                 // listItem.appendChild(para2);
+    //                 listItem.appendChild(para3);
+    //                 listItem.appendChild(para4);
+    //                 list1.appendChild(listItem);
 
-        }
+    //                 // Put the data from the cursor inside the h3 and para
+    //                 h3.textContent = "Welcome-:" + cursor.value.user;
+    //                 para3.textContent = "Lastname-" + cursor.value.lastname;
+    //                 para2.textContent = "Phone-" + cursor.value.email;
+    //                 para4.textContent = "Phone-" + cursor.value.phone;
 
-    }
+    //                 cursor.continue();
+    //             } else {
+    //                 // Again, if list item is empty, display a 'No notes stored' message
+    //                 if (!list.firstChild) {
+    //                     const listItem = document.createElement('li');
+    //                     listItem.textContent = 'No notes stored.';
+    //                     list.appendChild(listItem);
+    //                 }
+    //                 // if there are no more cursor items to iterate through, say so
+    //                 console.log('Notes all displayed');
+    //             }
+    //         }
+
+    //     }
+
+    // }
 };
