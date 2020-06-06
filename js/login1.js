@@ -105,7 +105,7 @@ window.onload = function() {
                         showLogin();
                         console.log('logined');
                         console.log('logined' + cursor.value.user);  
-                        displayData2();
+                        displayData();
                     }
                     cursor.continue();
                  
