@@ -36,12 +36,12 @@ function getRadioVal(form, name) {
 
 
 
-let db;
-const request = window.indexedDB.open('Registration', 5);
+
 console.log('Database enter');
 window.onload = function() {
     // let request = window.indexedDB.open('Registration', 1);
-
+    let db;
+    const request = window.indexedDB.open('Registration', 5);
 
     request.onerror = function() {
         console.log('Database failed to open');
@@ -56,6 +56,28 @@ window.onload = function() {
         //displayData();
         //createbtn();
     }
+    request.onupgradeneeded = function(e) {
+        // Grab a reference to the opened database
+        let db = e.target.result;
+
+        // Create an objectStore to store our notes in (basically like a single table)
+        // including a auto-incrementing key
+        let objectStore = db.createObjectStore('Login', { keyPath: 'userid', autoIncrement: true });
+
+        // Define what data items the objectStore will contain
+        objectStore.createIndex('user', 'user', { unique: false });
+        objectStore.createIndex('pass', 'pass', { unique: false });
+        objectStore.createIndex('email', 'email', { unique: false });
+        objectStore.createIndex('phone', 'phone', { unique: false });
+        objectStore.createIndex('bname', 'bname', { unique: false });
+        objectStore.createIndex('ndays', 'ndays', { unique: false });
+        objectStore.createIndex('room', 'room', { unique: false });
+        objectStore.createIndex('person', 'person', { unique: false });
+        objectStore.createIndex('other', 'other', { unique: false });
+
+
+        console.log('Database setup complete');
+    };
 
     form1.onsubmit = loginfunction;
     form2.onsubmit = displayData2;
@@ -77,34 +99,27 @@ window.onload = function() {
             cursorRequest.onsuccess = e => {
                 const cursor = e.target.result;
                 if (cursor) {
-                    if (cursor.value.user == userinput && cursor.value.phone == passt) {
+                    if (cursor.value.user === userinput) {
                         alert("Welcome-:" + cursor.value.user)
                         showLogin();
                         console.log('logined');
                         console.log('logined' + cursor.value.user);
-                        cursor.preventDefault;
-                    }
-                    // else {
-                    //   alert("User Invalid,Please register first")
-                    //     }
-                    else if (!cursor.value.user == userinput && !cursor.value.phone == passt) {
-                        cursor.continue();
-                    } else {
-                        console.log('login-else');
 
-                        alert("Invalid User/ Please Register first");
+
                     }
+                    cursor.continue();
+
                 } else {
                     console.log('login-else');
-                    alert("Invalid User/ Please Register first");
+
                 }
 
             }
             transaction.oncomplete = function() {
                 console.log('Transaction completed: database modification finished.');
-
-                // update the display of data to show the newly added item, by running displayData() again.
                 displayData2();
+                // update the display of data to show the newly added item, by running displayData() again.
+
             };
 
             transaction.onerror = function() {
@@ -189,7 +204,7 @@ window.onload = function() {
         var radioperson = getRadioVal(document.getElementById('selected'), 'person');
         var radioother = getRadioVal(document.getElementById('selected'), 'other');
 
-        e.preventDefault();
+        // e.preventDefault();
         const request = window.indexedDB.open("Registration", 5);
         request.onsuccess = () => {
 
