@@ -120,8 +120,6 @@ window.onload = function() {
 
     function displayData() {
 
-
-        // const request = window.indexedDB.open("Registration", 1);
         // // Here we empty the contents of the list element each time the display is updated
         // // If you didn't do this, you'd get duplicates listed each time a new note is added
         while (list1.firstChild) {
