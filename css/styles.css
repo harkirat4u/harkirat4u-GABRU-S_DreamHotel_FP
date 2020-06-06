@@ -108,6 +108,7 @@
                .login {
                    background-color: rgba(24, 102, 155, 0.425);
                    padding-bottom: 1em;
+                   border-radius: 5em 5em 5em 5em;
                }
                /* styles for the mobile class */
                
@@ -197,6 +198,7 @@
                    margin-top: 2em;
                    padding-top: 2em;
                    background-color: rgba(94, 83, 34, 0.425);
+                   border-radius: 5em 5em 5em 5em;
                }
                /* styles for the social id */
                
