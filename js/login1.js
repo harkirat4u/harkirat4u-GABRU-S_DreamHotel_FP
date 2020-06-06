@@ -99,19 +99,20 @@ window.onload = function() {
             cursorRequest.onsuccess = e => {
                 const cursor = e.target.result;
                 if (cursor) {
-                    if (cursor.value.user == userinput) 
+                    if (cursor.value.user == userinput && cursor.value.phone == passt) 
                     {
                         alert("Welcome-:" + cursor.value.user)
                         showLogin();
                         console.log('logined');
                         console.log('logined' + cursor.value.user);  
                         displayData();
+                        cursor.preventDefault();
                     }
                     cursor.continue();
                  
                 } else {
                     console.log('login-else');
-                   
+                   alert("invalid user");
                 }
               
 
