@@ -82,6 +82,7 @@ window.onload = function() {
                     if (cursor.value.user == userinput && cursor.value.phone == passt) {
                       alert("Welcome-:"+cursor.value.user)
                       showLogin();
+                     displayData()
                       console.log('logined');
                       console.log('logined'+cursor.value.user);
                      cursor.preventDefault;
