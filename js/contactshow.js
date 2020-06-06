@@ -77,7 +77,7 @@ window.onload = function() {
 
                 // Set an event handler so that when the button is clicked, the deleteItem()
                 // function is run
-                deleteBtn.onclick = deleteItem;
+            deleteBtn.onclick = alert("delete pressed");;
 
                 // Iterate to the next item in the cursor
                 cursor.continue();
