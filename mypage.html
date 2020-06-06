@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- This is the website created by ...... -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <script src="js/new.js" defer></script> -->
+    <script src="js/login1.js" defer></script>
+
+    <script>
+        function regbtn() {
+            window.open('./registration.html', '_blank');
+        }
+    </script>
+</head>
+
+<body background="images/background1.jpg" onload="alert(window.onload)">
+    <div id="container">
+        <!-- this area is for the logo -->
+        <header>
+            <a href="index.html"><img src="images/final.png" alt="Fitness Club Logo" /></a>
+        </header>
+
+        <!-- this area is for the hyperlinks to other pages -->
+        <nav>
+            <ul>
+                <li><a href="index.html ">Home</a></li>
+                <li><a href="about.html ">About US</a></li>
+                <li>
+                    <a href="mypage.html ">My Page</a>
+                </li>
+                <li>
+                    <a href="services.html ">Services</a>
+                </li>
+                <li><a href="contact.html ">Contact Us</a></li>
+            </ul>
+        </nav>
+
+
+
+
+        <!-- main content of the website -->
+        <main>
+
+            <center>
+                <div class="mypage">
+                    <div class="login">
+
+                        <form id="loginform">
+
+                            <img src="images/login.gif" alt="Avatar" class="avatar">
+
+                            <h1>Login</h1>
+                            <input type="text" placeholder="Enter Username" name="uname" id="user">
+
+
+                            <input type="password" placeholder="Enter Password" name="psw" required id="pass">
+
+                            <button type="submit" id="loginbtn" >Login</button>
+                            <button type="button" id="registerbtn" onclick="regbtn()">Register</button>
+                            <br>
+
+                        </form>
+
+                    </div>
+                    <div id="selectdata">
+                        <div class="div1">
+                            <h1> ROOM Services</h1>
+                            <img src=" images/room.jpg " alt="food image " class="desktop " />
+
+                            <form id="selected">
+                                <center>
+                                    <h3>ADD Booking</h3>
+                                    <input type="text" name="booking " placeholder="Booking name " id="bname1" width="auto ">
+
+                                    <input type="numbers" name="days " placeholder="number of day " id="ndays1" width="auto ">
+                                    <h3>Type Of Room</h3>
+
+                                    <label for="room">Delux</label>
+                                    <input type="radio" name="room" value="Delux">
+                                    <label for="room">Normal</label>
+                                    <input type="radio" name="room" value="Normal">
+                                    <label for="room">Luxury</label>
+                                    <input type="radio" name="room" value="Luxury">
+                                    <br>
+                                    <h3>Number Of Person</h3>
+
+
+                                    <label for="person">one</label>
+                                    <input type="radio" name="person" value="1">
+                                    <label for="person">two</label>
+                                    <input type="radio" name="person" value="2">
+                                    <label for="person">more</label>
+                                    <input type="radio" name="person" value="3">
+                                    <br>
+                                    <h3>Add Pool & Bar Services</h3>
+                                    <label for="other">Yes</label>
+                                    <input type="radio" name="other" value="Yes">
+                                    <label for="other">No</label>
+                                    <input type="radio" name="other" value="No">
+
+
+
+                                    <br>
+
+
+                                    <button type="submit " id="roombtn ">ADD</button>
+                                </center>
+                            </form>
+
+                        </div>
+                        <div class="div2">
+                            <h1>Services selected</h1>
+                            <ul id="ul1"></ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="register" style="display:none " id="Rform ">
+                        <h1>You Selected</h1>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </center>
+        </main>
+
+        <!-- footer of the webpage -->
+        <footer>
+            <div id="copyright ">
+                <p>
+                    &copy; Copyright 2020. All Rights reserved. <br />
+                    <a href="mailto:dream@hotel.net ">dream@hotel.net</a>
+                </p>
+            </div>
+            <div id="social ">
+                <p>Connect with us:</p>
+                <p>
+                    <a href="https://www.facebook.com/dreamsuitesyyz "><img src="images/fblogo.png " alt="Facebook Logo " /></a>
+                    <a href="https://twitter.com/HOTELSWEETDREA1 "><img src="images/twitterlogo.png " alt="Twitter Logo " /></a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
